@@ -7,8 +7,8 @@ export const counterSlice = createSlice({
     increment: (state) => {
       state.data += 1;
     },
-    decrement: (state) => {
-      state.data -= 1;
+    decrement: (state, { payload }) => {
+      state.data -= payload.a;
     },
   },
 });
